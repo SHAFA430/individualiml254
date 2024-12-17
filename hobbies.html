@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body bgcolor="#d3a0ed">
+
+
+<style>
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 15px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 600px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 600px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+</style>
+
+
+</head>
+<body>
+
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="index.html">Home</a>
+    <a href="aboutme.html">About Me</a>
+    <a href="education.html">Education</a>
+    <a href="family.html">My Family</a>
+    <a href="hobbies.html">Hobbies</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
+
+
+<h2><span style='font-size:50px;'>&#128153;</span>My Hobbies</h2>
+<p></p>
+<p></p>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+<header>
+  <h2>Hobbies are an integral part of human existence. They provide a window into our passions, talents, and interests, and play a significant role in shaping our identities.</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="</a></li>
+      <li><a href="</a></li>
+      <li><a href="#"></a></li>
+    </ul>
+  </nav>
+  
+  <article>
+
+
+<h2>MY HOBBIES ACTIVITIES</h2>
+
+<table>
+  <tr>
+    <th>HOBBIES</th>
+  
+    
+  </tr>
+  <tr>
+    <td><img src="image/shopping.jpeg" alt="HTML5 Icon" width="autofit" height="150"></td>
+    <td>SHOPPING AT MALL</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><img src="image/reading.jpeg" alt="HTML5 Icon" width="autofit" height="150"></td>
+    <td>READING BOOK AT THE LIBRARY</td>
+  </tr>
+  <tr>
+    <td><img src="image/cat.jpeg" alt="HTML5 Icon" width="autofit" height="150"></td>
+    <td>PLAYING WITH CAT</td>
+  </tr>
+  <tr>
+   
+  
+</table>
+
+
+  </article>
+</section>
+<br>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+<footer>
+  <p>WAN NOR SHAFAIN BIN WAN MOHAMMED NOR</p>
+</footer>
+
+</body>
+</html>
+
